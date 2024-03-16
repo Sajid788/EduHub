@@ -28,7 +28,7 @@ userSchema.methods.generateAccessToken = function (){
     return jwt.sign({
         _id: this._id,
         email: this.email
-    },process.env.JWT_SECRET,{expiresIn : process.env.JWT_SECRET});
+    },process.env.JWT_SECRET,{expiresIn : process.env.ACCESS_TOKEN_EXP});
 };
 
 const UserModel = mongoose.model('User', userSchema);

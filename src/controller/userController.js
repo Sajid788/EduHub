@@ -46,7 +46,7 @@ const generateToken = async (userId) => {
   
       const existedUser = await UserModel.findOne({ email: email });
       if (!existedUser) {
-        throw new Error("please signup first");
+        throw new Error("Please signup first");
       }
   
       const isPasswordCorrect = await existedUser.isPasswordCorrect(
