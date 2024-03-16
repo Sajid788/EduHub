@@ -18,11 +18,11 @@
 -   Book: Get Single book
 
 ## Mutation
- createUser: Register a new user
- loginUser: Login a user
- createBook: Create a new book
- updateBook: Update a book
- deleteBook: Delete a book
+-   createUser: Register a new user
+-   loginUser: Login a user
+-   createBook: Create a new book
+-   updateBook: Update a book
+-   deleteBook: Delete a book
 
 Note:- only Admin can Create, Update & Delete books
 
