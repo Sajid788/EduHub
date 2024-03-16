@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  role: { type: String, enum: ['admin', 'regular'], default: 'regular' },
+  role: { type: String, enum: ["Admin", "regular"], default: "regular" },
 });
 
 userSchema.pre("save", async function(next){
@@ -28,7 +28,7 @@ userSchema.methods.generateAccessToken = function (){
     return jwt.sign({
         _id: this._id,
         email: this.email
-    },process.env.JWT_SECRET,{expiresIn : process.env.ACCESS_TOKEN_EXP});
+    },process.env.ACCESS_TOKEN_SECRET,{expiresIn : process.env.ACCESS_TOKEN_EXP});
 };
 
 const UserModel = mongoose.model('User', userSchema);

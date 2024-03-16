@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   try {

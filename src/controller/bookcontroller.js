@@ -1,14 +1,12 @@
 const BookModel = require("../model/BookModel")
 
-const Book = require('../models/bookModel');
-
 const createBook = async (data) => {
-  const { title, author, genre, price } = data;
+  const { title, author, discription, price } = data;
   try {
-    if (!title || !author || !genre, price) {
+    if (!title || !author || !discription || !price) {
       throw new Error("Please fill the all feild");
     }
-    const book = await BookModel.create({ title, author, genre,price });
+    const book = await BookModel.create({ title, author, discription,price });
     if(!book){
         throw new Error('Unable to create book');
     }
@@ -31,11 +29,11 @@ const deleteBook = async (id) => {
   };
 
   const updateBook = async ( data) => {
-    const { id, title, author, genre,price } = data;
+    const { id, title, author, discription,price } = data;
     let update = {};
     if (title) update.title = title;
     if (author) update.author = author;
-    if (genre) update.genre = genre;
+    if (discription) update.discription = discription;
     if (price) update.price = price
     try {
       const updatedBook = await BookModel.findByIdAndUpdate(id, update, { new: true });

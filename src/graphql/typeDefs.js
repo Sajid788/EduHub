@@ -12,8 +12,8 @@ type Book {
     id: ID!
     title: String!
     author: String!
-    genre: String!
-    price: String!
+    discription: String!
+    price: Float!
   }
 
 type Query {
@@ -31,8 +31,8 @@ type Mutation {
     createUser(email: String!, name: String!, password: String!, role: String!): User
     loginUser(email: String!, password: String!): User
 
-    addBook(title: String!, author: String!, genre: String!, price: String!): Book!
-    updateBook(id: ID!, title: String!, author: String!, genre: String!, price: String!): Book!
+    createBook(title: String!, author: String!,discription : String!, price: Float!): Book!
+    updateBook(id: ID!, title: String!, author: String!, discription: String!, price: Float!): Book!
     deleteBook(id: ID!): Book!
 }
 
