@@ -23,6 +23,9 @@
 -   createBook: Create a new book
 -   updateBook: Update a book
 -   deleteBook: Delete a book
+-   passwordChange: Change a user's password
+-   deteteUser: Delete a user
+-   BorrowBook: Borrow a book
 
 Note:- only Admin can Create, Update & Delete books
 
