@@ -46,7 +46,7 @@ const resolvers = {
       }
     },
 
-    createBook: async (_, { title, author, discription, price }, context) => {
+    createBook: async (_, { title, author, discription, price }, context) =>{
       if (!authorization(context, "Admin")) {
         return await createBook({ title, author, discription, price });
       }
