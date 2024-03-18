@@ -1,4 +1,4 @@
-# Book-Library Backend
+# Book-Library Using GraphQL: Detailed Documentation
 
 ## Live link: https://edu-hub-gilt.vercel.app/
 
