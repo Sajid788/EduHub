@@ -48,7 +48,7 @@ const deleteBook = async (id) => {
 
   const getAllBooks = async () => {
     try {
-      const books = await Book.find().populate("Books");
+      const books = await BookModel.find();
       if(!books){
         throw new Error("unale to find book")
       }

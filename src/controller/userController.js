@@ -127,7 +127,7 @@ const generateToken = async (userId) => {
       throw new Error("id not found");
     }
     try {
-      const user = await UserModel.findById(id).populate("courses");
+      const user = await UserModel.findById(id);
       if (!user) {
         throw new Error("User not found");
       }
@@ -141,7 +141,7 @@ const generateToken = async (userId) => {
 
   const getAllUser = async () => {
     try {
-      const users = await UserModel.find().populate("courses");
+      const users = await UserModel.find();
       if (!users) {
         throw new Error("Unable to access users right now");
       }
