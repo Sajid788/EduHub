@@ -10,7 +10,7 @@
 -   Graphql
 -   Apollo Server
 
-#API Endpoint
+# API Endpoint
  API is built with GraphQL. Here are some of the main queries and mutations:
 
 ## Queries
