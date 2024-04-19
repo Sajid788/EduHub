@@ -1,6 +1,6 @@
 # Book-Library Using GraphQL : Detailed Documentation
 
-## Live link: https://edu-hub-gilt.vercel.app/
+ Live link: https://edu-hub-gilt.vercel.app/
 
 ## Tech Stack
 -   Node.js
